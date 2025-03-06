@@ -1,0 +1,104 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "CasteCertificate": "https://sdpi.punjab.gov.in/terms/CasteCertificate",
+    "issuer": "https://schema.org/Organization",
+    "issuanceDate": "https://schema.org/dateIssued",
+    "credentialSubject": {
+      "@id": "https://schema.org/Person",
+      "@type": "https://schema.org/Person"
+    },
+    "caste": "https://sdpi.punjab.gov.in/terms/caste",
+    "subCaste": "https://sdpi.punjab.gov.in/terms/subCaste",
+    "jurisdiction": "https://schema.org/AdministrativeArea",
+    "verificationMethod": "https://w3id.org/security#verificationMethod",
+    "proof": "https://w3id.org/security#Proof"
+  },
+  "title": "Caste Certificate Schema",
+  "description": "A schema defining the structure of a Caste Certificate issued by the Punjab Government.",
+  "version": "1.0.0",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the Caste Certificate"
+    },
+    "type": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Type of credential, must include 'VerifiableCredential' and 'CasteCertificate'"
+    },
+    "issuer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "DID of the issuing authority"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the issuing authority"
+        }
+      }
+    },
+    "issuanceDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date of issuance of the certificate"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "DID of the certificate holder"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the certificate holder"
+        },
+        "caste": {
+          "type": "string",
+          "description": "The caste of the certificate holder"
+        },
+        "subCaste": {
+          "type": "string",
+          "description": "The sub-caste of the certificate holder"
+        },
+        "jurisdiction": {
+          "type": "string",
+          "description": "Administrative jurisdiction under which the certificate is issued"
+        }
+      }
+    },
+    "proof": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of cryptographic proof"
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the credential was signed"
+        },
+        "proofPurpose": {
+          "type": "string",
+          "description": "Purpose of the proof (e.g., assertionMethod)"
+        },
+        "verificationMethod": {
+          "type": "string",
+          "description": "DID or key reference used to verify the proof"
+        },
+        "signatureValue": {
+          "type": "string",
+          "description": "Cryptographic signature for verifying authenticity"
+        }
+      }
+    }
+  },
+  "required": ["id", "type", "issuer", "issuanceDate", "credentialSubject", "proof"]
+}

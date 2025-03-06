@@ -1,0 +1,86 @@
+{
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "version": "1.0.0",
+      "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential",
+      "issuer": "https://schema.org/issuer",
+      "issuanceDate": "https://schema.org/dateIssued",
+      "expirationDate": "https://schema.org/validUntil",
+      "credentialStatus": "https://w3id.org/vc/status",
+      "revocationReason": "https://w3id.org/vc/revocationReason",
+      "credentialSchema": "https://w3id.org/vc/schema",
+      "holder": "https://schema.org/Person",
+      "credentialSubject": {
+        "@id": "https://schema.org/Person",
+        "@type": "https://schema.org/Person"
+      },
+      "proof": {
+        "@id": "https://w3id.org/security#proof",
+        "@type": "https://w3id.org/security#Proof"
+      },
+      "signatureValue": "https://w3id.org/security#signatureValue",
+      "verificationMethod": "https://w3id.org/security#verificationMethod",
+      "evidence": "https://schema.org/Evidence",
+      "jurisdiction": "https://schema.org/AdministrativeArea",
+      "termsOfUse": "https://schema.org/termsOfService",
+      
+      "AadhaarCard": "https://sdpi.punjab.gov.in/schema/AadhaarCard-1.0.0.jsonld",
+      "ResidenceCertificate": "https://sdpi.punjab.gov.in/schema/ResidenceCertificate-1.0.0.jsonld",
+      "CasteCertificate": "https://sdpi.punjab.gov.in/schema/CasteCertificate-1.0.0.jsonld",
+      "BirthCertificate": "https://sdpi.punjab.gov.in/schema/BirthCertificate-1.0.0.jsonld",
+      "DeathCertificate": "https://sdpi.punjab.gov.in/schema/DeathCertificate-1.0.0.jsonld",
+      "MarriageCertificate": "https://sdpi.punjab.gov.in/schema/MarriageCertificate-1.0.0.jsonld",
+      
+      "IncomeCertificate": "https://sdpi.punjab.gov.in/schema/IncomeCertificate-1.0.0.jsonld",
+      "BPLCertificate": "https://sdpi.punjab.gov.in/schema/BPLCertificate-1.0.0.jsonld",
+      "RationCard": "https://sdpi.punjab.gov.in/schema/RationCard-1.0.0.jsonld",
+      
+      "DisabilityCertificate": "https://sdpi.punjab.gov.in/schema/DisabilityCertificate-1.0.0.jsonld",
+      "MedicalCertificate": "https://sdpi.punjab.gov.in/schema/MedicalCertificate-1.0.0.jsonld",
+      "SeniorCitizenCertificate": "https://sdpi.punjab.gov.in/schema/SeniorCitizenCertificate-1.0.0.jsonld",
+      
+      "LandOwnershipCertificate": "https://sdpi.punjab.gov.in/schema/LandOwnershipCertificate-1.0.0.jsonld",
+      "PropertyTaxCertificate": "https://sdpi.punjab.gov.in/schema/PropertyTaxCertificate-1.0.0.jsonld",
+      "TenantVerificationCertificate": "https://sdpi.punjab.gov.in/schema/TenantVerificationCertificate-1.0.0.jsonld",
+      "AgriculturalLandholdingCertificate": "https://sdpi.punjab.gov.in/schema/AgriculturalLandholdingCertificate-1.0.0.jsonld",
+      
+      "ElectricityConsumptionCertificate": "https://sdpi.punjab.gov.in/schema/ElectricityConsumptionCertificate-1.0.0.jsonld",
+      "WaterConnectionCertificate": "https://sdpi.punjab.gov.in/schema/WaterConnectionCertificate-1.0.0.jsonld",
+      "GasConnectionCertificate": "https://sdpi.punjab.gov.in/schema/GasConnectionCertificate-1.0.0.jsonld",
+      
+      "EmploymentCertificate": "https://sdpi.punjab.gov.in/schema/EmploymentCertificate-1.0.0.jsonld",
+      "UnemploymentCertificate": "https://sdpi.punjab.gov.in/schema/UnemploymentCertificate-1.0.0.jsonld",
+      "MSMERegistrationCertificate": "https://sdpi.punjab.gov.in/schema/MSMERegistrationCertificate-1.0.0.jsonld",
+      "LabourRegistrationCertificate": "https://sdpi.punjab.gov.in/schema/LabourRegistrationCertificate-1.0.0.jsonld",
+      
+      "SchoolLeavingCertificate": "https://sdpi.punjab.gov.in/schema/SchoolLeavingCertificate-1.0.0.jsonld",
+      "EducationalQualificationCertificate": "https://sdpi.punjab.gov.in/schema/EducationalQualificationCertificate-1.0.0.jsonld",
+      "ScholarshipEligibilityCertificate": "https://sdpi.punjab.gov.in/schema/ScholarshipEligibilityCertificate-1.0.0.jsonld",
+      "VocationalTrainingCertificate": "https://sdpi.punjab.gov.in/schema/VocationalTrainingCertificate-1.0.0.jsonld",
+      
+      "OldAgePensionCertificate": "https://sdpi.punjab.gov.in/schema/OldAgePensionCertificate-1.0.0.jsonld",
+      "WidowPensionCertificate": "https://sdpi.punjab.gov.in/schema/WidowPensionCertificate-1.0.0.jsonld",
+      "DivyangjanAssistanceCertificate": "https://sdpi.punjab.gov.in/schema/DivyangjanAssistanceCertificate-1.0.0.jsonld",
+      "AshirwadSchemeCertificate": "https://sdpi.punjab.gov.in/schema/AshirwadSchemeCertificate-1.0.0.jsonld",
+      
+      "FarmerIdentificationCertificate": "https://sdpi.punjab.gov.in/schema/FarmerIdentificationCertificate-1.0.0.jsonld",
+      "PMKisanYojanaBeneficiaryCertificate": "https://sdpi.punjab.gov.in/schema/PMKisanYojanaBeneficiaryCertificate-1.0.0.jsonld",
+      "SoilHealthCard": "https://sdpi.punjab.gov.in/schema/SoilHealthCard-1.0.0.jsonld",
+      "SubsidyEligibilityCertificate": "https://sdpi.punjab.gov.in/schema/SubsidyEligibilityCertificate-1.0.0.jsonld",
+      
+      "DrivingLicense": "https://sdpi.punjab.gov.in/schema/DrivingLicense-1.0.0.jsonld",
+      "VehicleRegistrationCertificate": "https://sdpi.punjab.gov.in/schema/VehicleRegistrationCertificate-1.0.0.jsonld",
+      "PollutionUnderControlCertificate": "https://sdpi.punjab.gov.in/schema/PollutionUnderControlCertificate-1.0.0.jsonld",
+      "PublicTransportConcessionCertificate": "https://sdpi.punjab.gov.in/schema/PublicTransportConcessionCertificate-1.0.0.jsonld",
+      
+      "MaternityBenefitCertificate": "https://sdpi.punjab.gov.in/schema/MaternityBenefitCertificate-1.0.0.jsonld",
+      "AnganwadiBeneficiaryCertificate": "https://sdpi.punjab.gov.in/schema/AnganwadiBeneficiaryCertificate-1.0.0.jsonld",
+      "SelfHelpGroupMembershipCertificate": "https://sdpi.punjab.gov.in/schema/SelfHelpGroupMembershipCertificate-1.0.0.jsonld",
+      
+      "SolarPanelSubsidyEligibilityCertificate": "https://sdpi.punjab.gov.in/schema/SolarPanelSubsidyEligibilityCertificate-1.0.0.jsonld",
+      "RainwaterHarvestingCertificate": "https://sdpi.punjab.gov.in/schema/RainwaterHarvestingCertificate-1.0.0.jsonld",
+      "GreenEnergyCertificate": "https://sdpi.punjab.gov.in/schema/GreenEnergyCertificate-1.0.0.jsonld"
+    }
+  }
+  
